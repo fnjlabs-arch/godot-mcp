@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Godot MCP Server
+ * SadSha Godot MCP Server
  *
  * This MCP server provides tools for interacting with the Godot game engine.
  * It enables AI assistants to launch the Godot editor, run Godot projects,
@@ -59,7 +59,7 @@ interface OperationParams {
 }
 
 /**
- * Main server class for the Godot MCP server
+ * Main server class for the SadSha Godot MCP server
  */
 class GodotServer {
   private server: Server;
@@ -138,7 +138,7 @@ class GodotServer {
     // Initialize the MCP server
     this.server = new Server(
       {
-        name: 'godot-mcp',
+        name: 'sadsha-godot-mcp',
         version: '0.1.0',
       },
       {
@@ -2203,7 +2203,7 @@ class GodotServer {
 
       const transport = new StdioServerTransport();
       await this.server.connect(transport);
-      console.error('Godot MCP server running on stdio');
+      console.error('SadSha Godot MCP server running on stdio');
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       console.error('[SERVER] Failed to start:', errorMessage);

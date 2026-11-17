@@ -1,7 +1,7 @@
 {
-  "name": "godot-mcp",
+  "name": "@sadsha/godot-mcp",
   "version": "0.1.1",
-  "description": "MCP server for interfacing with Godot game engine. Provides tools for launching the editor, running projects, and capturing debug output.",
+  "description": "SadSha Godot MCP — MCP server for interfacing with the Godot game engine. Provides tools for launching the editor, running projects, and capturing debug output.",
   "keywords": [
     "godot",
     "mcp",
@@ -9,19 +9,19 @@
     "claude",
     "cline"
   ],
-  "homepage": "https://github.com/Coding-Solo/godot-mcp",
+  "homepage": "https://github.com/fnjlabs-arch/godot-mcp",
   "bugs": {
-    "url": "https://github.com/Coding-Solo/godot-mcp/issues"
+    "url": "https://github.com/fnjlabs-arch/godot-mcp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Coding-Solo/godot-mcp.git"
+    "url": "https://github.com/fnjlabs-arch/godot-mcp.git"
   },
   "license": "MIT",
   "author": "Solomon Elias <solomon@sippy.ai>",
   "type": "module",
   "bin": {
-    "godot-mcp": "./build/index.js"
+    "sadsha-godot-mcp": "./build/index.js"
   },
   "files": [
     "build"

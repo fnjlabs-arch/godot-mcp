@@ -1,15 +1,14 @@
-# Godot MCP
+# SadSha Godot MCP
 
-[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Coding-Solo)
 
 [![](https://badge.mcpx.dev?type=server 'MCP Server')](https://modelcontextprotocol.io/introduction)
 [![Made with Godot](https://img.shields.io/badge/Made%20with-Godot-478CBF?style=flat&logo=godot%20engine&logoColor=white)](https://godotengine.org)
 [![](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white 'Node.js')](https://nodejs.org/en/download/)
 [![](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white 'TypeScript')](https://www.typescriptlang.org/)
 
-[![](https://img.shields.io/github/last-commit/Coding-Solo/godot-mcp 'Last Commit')](https://github.com/Coding-Solo/godot-mcp/commits/main)
-[![](https://img.shields.io/github/stars/Coding-Solo/godot-mcp 'Stars')](https://github.com/Coding-Solo/godot-mcp/stargazers)
-[![](https://img.shields.io/github/forks/Coding-Solo/godot-mcp 'Forks')](https://github.com/Coding-Solo/godot-mcp/network/members)
+[![](https://img.shields.io/github/last-commit/fnjlabs-arch/godot-mcp 'Last Commit')](https://github.com/fnjlabs-arch/godot-mcp/commits/main)
+[![](https://img.shields.io/github/stars/fnjlabs-arch/godot-mcp 'Stars')](https://github.com/fnjlabs-arch/godot-mcp/stargazers)
+[![](https://img.shields.io/github/forks/fnjlabs-arch/godot-mcp 'Forks')](https://github.com/fnjlabs-arch/godot-mcp/network/members)
 [![](https://img.shields.io/badge/License-MIT-red.svg 'MIT License')](https://opensource.org/licenses/MIT)
 
 
@@ -57,7 +56,7 @@ A Model Context Protocol (MCP) server for interacting with the Godot game engine
 
 ## Introduction
 
-Godot MCP enables AI agents to launch the Godot editor, run projects, capture debug output, and control project execution. This direct feedback loop helps agents understand what works and what doesn't in real Godot projects, leading to better code generation and debugging assistance.
+SadSha Godot MCP enables AI agents to launch the Godot editor, run projects, capture debug output, and control project execution. This direct feedback loop helps agents understand what works and what doesn't in real Godot projects, leading to better code generation and debugging assistance.
 
 ## Features
 
@@ -89,15 +88,15 @@ Godot MCP enables AI agents to launch the Godot editor, run projects, capture de
 ### Claude Code
 
 ```bash
-claude mcp add godot -- npx @coding-solo/godot-mcp
+claude mcp add godot -- npx @sadsha/godot-mcp
 ```
 
-That's it. Restart Claude Code and your Godot MCP tools are available.
+That's it. Restart Claude Code and your SadSha Godot MCP tools are available.
 
 With environment variables:
 
 ```bash
-claude mcp add godot -e GODOT_PATH=/path/to/godot -e DEBUG=true -- npx @coding-solo/godot-mcp
+claude mcp add godot -e GODOT_PATH=/path/to/godot -e DEBUG=true -- npx @sadsha/godot-mcp
 ```
 
 <details>
@@ -110,7 +109,7 @@ Add to your Cline MCP settings file (`~/Library/Application Support/Code/User/gl
   "mcpServers": {
     "godot": {
       "command": "npx",
-      "args": ["@coding-solo/godot-mcp"],
+      "args": ["@sadsha/godot-mcp"],
       "env": {
         "DEBUG": "true"
       },
@@ -148,7 +147,7 @@ Add to your Cline MCP settings file (`~/Library/Application Support/Code/User/gl
 3. Fill out the form:
    - Name: `godot`
    - Type: `command`
-   - Command: `npx @coding-solo/godot-mcp`
+   - Command: `npx @sadsha/godot-mcp`
 4. Click "Add"
 5. You may need to press the refresh button in the top right corner of the MCP server card to populate the tool list
 
@@ -161,7 +160,7 @@ Create a file at `.cursor/mcp.json` in your project directory:
   "mcpServers": {
     "godot": {
       "command": "npx",
-      "args": ["@coding-solo/godot-mcp"],
+      "args": ["@sadsha/godot-mcp"],
       "env": {
         "DEBUG": "true"
       }
@@ -182,7 +181,7 @@ For any MCP-compatible client, use this configuration:
   "mcpServers": {
     "godot": {
       "command": "npx",
-      "args": ["@coding-solo/godot-mcp"],
+      "args": ["@sadsha/godot-mcp"],
       "env": {
         "GODOT_PATH": "/path/to/godot",
         "DEBUG": "true"
@@ -205,7 +204,7 @@ For any MCP-compatible client, use this configuration:
 <summary><strong>Building from Source</strong></summary>
 
 ```bash
-git clone https://github.com/Coding-Solo/godot-mcp.git
+git clone https://github.com/fnjlabs-arch/godot-mcp.git
 cd godot-mcp
 npm install
 npm run build
@@ -218,7 +217,7 @@ Then point your MCP client to `build/index.js` instead of using `npx`.
 
 ## Architecture
 
-The Godot MCP server uses a bundled GDScript approach for complex operations:
+The SadSha Godot MCP server uses a bundled GDScript approach for complex operations:
 
 1. **Direct Commands**: Simple operations like launching the editor or getting project info use Godot's built-in CLI commands directly.
 2. **Bundled Operations Script**: Complex operations like creating scenes or adding nodes use a single, comprehensive GDScript file (`godot_operations.gd`) that handles all operations.
